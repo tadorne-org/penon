@@ -1,0 +1,190 @@
+; v2_1_plaque_foret.nc - duree de coupe estimee 1 min
+; Penon resonance V2 - CNC 3018
+; Genere par cnc3018_v2.py depuis commun.scad + resonance_v2.scad, profondeur reprise pour 2 disques
+; Z0 = DESSUS DE LA PILE (palper sur le disque du dessus)
+; 2 PLAQUES ALU D100 x 1.5 EMPILEES dans le gabarit de 2.8, adhesif double face dessous
+; Perce la plaque HAUTE et la plaque BASSE en une fois : pile de 3, fond a 4.3
+; Outil T2 : foret D2.9 HSS-Co DIN 338 pointe 135, pince ER11 3 (passage M2.5 moyen ISO 273)
+G21 G90 G17 G94
+G0 Z15
+M3 S10000
+G4 P3
+; 6 passages M2.5 debouchants
+G0 Z15
+G0 X43 Y0
+G0 Z1
+G1 Z-0.5 F40
+G0 Z1
+G0 Z-0.2
+G1 Z-1 F40
+G0 Z1
+G0 Z-0.7
+G1 Z-1.5 F40
+G0 Z1
+G0 Z-1.2
+G1 Z-2 F40
+G0 Z1
+G0 Z-1.7
+G1 Z-2.5 F40
+G0 Z1
+G0 Z-2.2
+G1 Z-3 F40
+G0 Z1
+G0 Z-2.7
+G1 Z-3.5 F40
+G0 Z1
+G0 Z-3.2
+G1 Z-4 F40
+G0 Z1
+G0 Z-3.7
+G1 Z-4.3 F40
+G0 Z1
+G0 Z15
+G0 X21.5 Y37.2391
+G0 Z1
+G1 Z-0.5 F40
+G0 Z1
+G0 Z-0.2
+G1 Z-1 F40
+G0 Z1
+G0 Z-0.7
+G1 Z-1.5 F40
+G0 Z1
+G0 Z-1.2
+G1 Z-2 F40
+G0 Z1
+G0 Z-1.7
+G1 Z-2.5 F40
+G0 Z1
+G0 Z-2.2
+G1 Z-3 F40
+G0 Z1
+G0 Z-2.7
+G1 Z-3.5 F40
+G0 Z1
+G0 Z-3.2
+G1 Z-4 F40
+G0 Z1
+G0 Z-3.7
+G1 Z-4.3 F40
+G0 Z1
+G0 Z15
+G0 X-21.5 Y37.2391
+G0 Z1
+G1 Z-0.5 F40
+G0 Z1
+G0 Z-0.2
+G1 Z-1 F40
+G0 Z1
+G0 Z-0.7
+G1 Z-1.5 F40
+G0 Z1
+G0 Z-1.2
+G1 Z-2 F40
+G0 Z1
+G0 Z-1.7
+G1 Z-2.5 F40
+G0 Z1
+G0 Z-2.2
+G1 Z-3 F40
+G0 Z1
+G0 Z-2.7
+G1 Z-3.5 F40
+G0 Z1
+G0 Z-3.2
+G1 Z-4 F40
+G0 Z1
+G0 Z-3.7
+G1 Z-4.3 F40
+G0 Z1
+G0 Z15
+G0 X-43 Y0
+G0 Z1
+G1 Z-0.5 F40
+G0 Z1
+G0 Z-0.2
+G1 Z-1 F40
+G0 Z1
+G0 Z-0.7
+G1 Z-1.5 F40
+G0 Z1
+G0 Z-1.2
+G1 Z-2 F40
+G0 Z1
+G0 Z-1.7
+G1 Z-2.5 F40
+G0 Z1
+G0 Z-2.2
+G1 Z-3 F40
+G0 Z1
+G0 Z-2.7
+G1 Z-3.5 F40
+G0 Z1
+G0 Z-3.2
+G1 Z-4 F40
+G0 Z1
+G0 Z-3.7
+G1 Z-4.3 F40
+G0 Z1
+G0 Z15
+G0 X-21.5 Y-37.2391
+G0 Z1
+G1 Z-0.5 F40
+G0 Z1
+G0 Z-0.2
+G1 Z-1 F40
+G0 Z1
+G0 Z-0.7
+G1 Z-1.5 F40
+G0 Z1
+G0 Z-1.2
+G1 Z-2 F40
+G0 Z1
+G0 Z-1.7
+G1 Z-2.5 F40
+G0 Z1
+G0 Z-2.2
+G1 Z-3 F40
+G0 Z1
+G0 Z-2.7
+G1 Z-3.5 F40
+G0 Z1
+G0 Z-3.2
+G1 Z-4 F40
+G0 Z1
+G0 Z-3.7
+G1 Z-4.3 F40
+G0 Z1
+G0 Z15
+G0 X21.5 Y-37.2391
+G0 Z1
+G1 Z-0.5 F40
+G0 Z1
+G0 Z-0.2
+G1 Z-1 F40
+G0 Z1
+G0 Z-0.7
+G1 Z-1.5 F40
+G0 Z1
+G0 Z-1.2
+G1 Z-2 F40
+G0 Z1
+G0 Z-1.7
+G1 Z-2.5 F40
+G0 Z1
+G0 Z-2.2
+G1 Z-3 F40
+G0 Z1
+G0 Z-2.7
+G1 Z-3.5 F40
+G0 Z1
+G0 Z-3.2
+G1 Z-4 F40
+G0 Z1
+G0 Z-3.7
+G1 Z-4.3 F40
+G0 Z1
+G0 Z15
+M5
+G0 X0 Y0
+M2
