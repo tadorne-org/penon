@@ -27,11 +27,6 @@ Penon is a masthead wind sensor with **no moving parts**. Wind is read in the wa
 | **Time of flight** | A first 3D-printed version ([26 August 2026](/log/first-print/)). |
 | **Resonance** | A cavity formed by two discs, probes mounted flush with the lower disc, upper disc as reflector. This is the track currently on the bench. |
 
-<figure>
-  <img src="/img/prototype.webp" alt="3D-printed mechanical prototype on a windowsill.">
-  <figcaption>The first time-of-flight version, 3D-printed.</figcaption>
-</figure>
-
 ## The bench
 
 The project opens at the workbench, not on the water. The cavity is measured first: **resonance frequency, quality factor, phase slope**.

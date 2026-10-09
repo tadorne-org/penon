@@ -27,11 +27,6 @@ Penon est un anémomètre de tête de mât **sans aucune pièce mobile**. Le ven
 | **Temps de vol** | Une première version imprimée en 3D ([26 août 2026](/fr/journal/premiere-impression/)). |
 | **Résonance** | Une cavité formée de deux disques, sondes montées à fleur du disque bas, disque haut en réflecteur. C'est la piste actuellement au banc. |
 
-<figure>
-  <img src="/img/prototype.webp" alt="Prototype mécanique imprimé en 3D, posé sur un rebord de fenêtre.">
-  <figcaption>La première version temps de vol, imprimée en 3D.</figcaption>
-</figure>
-
 ## Le banc
 
 Le projet s'ouvre à l'établi, pas à l'eau. La cavité passe d'abord sous la mesure : **fréquence de résonance, facteur de qualité, pente de phase**.
