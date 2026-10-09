@@ -19,6 +19,8 @@ timeZone = "Europe/Paris"
   gpgFingerprint = "5420 08E3 53EC A628 B4D6  ACAD 8C03 243A FF69 5BF7"
   gpgUid = "Tadorne <contact@tadorne.org>"
   gpgURL = "https://tadorne.org/verify/"
+  # Public repository: site source and published design files.
+  sourceURL = "https://github.com/tadorne-org/penon"
   ogImage = "/img/tadorne-logo.svg"
   # Penon is pre-disclosure: the site builds, but no search engine indexes it
   # and robots.txt closes the door. Flip to true once the publication

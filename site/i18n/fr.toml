@@ -29,6 +29,9 @@ other = "Toutes les notes"
 [footerNavigation]
 other = "Navigation"
 
+[footerSource]
+other = "Sources sur GitHub"
+
 [footerAuthenticity]
 other = "Authenticité"
 

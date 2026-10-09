@@ -15,6 +15,9 @@
           {{- range .Site.Menus.main }}
           <li><a href="{{ .URL }}">{{ .Name }}</a></li>
           {{- end }}
+          {{- with .Site.Params.sourceURL }}
+          <li><a href="{{ . }}">{{ i18n "footerSource" }}</a></li>
+          {{- end }}
         </ul>
       </div>
 
