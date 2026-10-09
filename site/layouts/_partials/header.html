@@ -10,6 +10,9 @@
       {{- $active := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
       <a href="{{ .URL }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a>
       {{- end }}
+      {{- with .Site.Params.sourceURL }}
+      <a href="{{ . }}" title="{{ i18n "footerSource" }}">GitHub</a>
+      {{- end }}
     </nav>
 
     {{ partial "langswitch.html" . }}
