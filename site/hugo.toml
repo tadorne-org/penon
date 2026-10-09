@@ -75,6 +75,10 @@ timeZone = "Europe/Paris"
         pageRef = "/log"
         weight = 30
       [[languages.en.menus.main]]
+        name = "Documentation"
+        pageRef = "/documentation"
+        weight = 35
+      [[languages.en.menus.main]]
         name = "About"
         pageRef = "/about"
         weight = 50
@@ -102,6 +106,10 @@ timeZone = "Europe/Paris"
         name = "Journal"
         pageRef = "/journal"
         weight = 30
+      [[languages.fr.menus.main]]
+        name = "Documentation"
+        pageRef = "/documentation"
+        weight = 35
       [[languages.fr.menus.main]]
         name = "À propos"
         pageRef = "/a-propos"

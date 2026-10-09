@@ -1,0 +1,21 @@
+{{- /* {{< log-sources >}} — lists every note published in the public log.
+       The documentation page draws on the log only: this is its source list,
+       built at render time so a new note appears without touching the page. */ -}}
+{{- $site := .Page.Site -}}
+{{- $log := $site.GetPage $site.Params.logSection -}}
+{{- with $log -}}
+<div class="entries">
+  {{- range .Pages.ByDate.Reverse }}
+  <article class="entry">
+    <div class="entry__date">
+      {{- with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ time.Format ":date_medium" . }}</time>{{ end -}}
+    </div>
+    <div>
+      <h3 class="entry__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Description | default .Summary }}</p>
+    </div>
+  </article>
+  {{- end }}
+</div>
+<p style="margin-top:1.5rem"><a class="more" href="{{ $log.RelPermalink }}">{{ i18n "allLog" }}</a></p>
+{{- end -}}
