@@ -1,4 +1,8 @@
-public/
-resources/
-.hugo_build.lock
+# macOS
 .DS_Store
+
+# KiCad : verrous, sauvegardes, réglages locaux
+*.kicad_prl
+*-backups/
+~*.lck
+fp-info-cache
