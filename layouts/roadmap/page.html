@@ -1,0 +1,26 @@
+{{ define "main" }}
+  <article>
+    <header class="page-head">
+      {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-head__lead">{{ . }}</p>{{ end }}
+    </header>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+
+    {{ with .Params.milestones }}
+    <ol class="milestones">
+      {{- range . }}
+      <li class="milestone">
+        <span class="milestone__id">{{ .id }}</span>
+        <div>
+          <p class="milestone__title">{{ .title }}</p>
+          {{ with .body }}<p class="milestone__body">{{ . }}</p>{{ end }}
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+    {{ end }}
+  </article>
+{{ end }}

@@ -1,0 +1,24 @@
+Copyright Tadorne 2026.
+
+This source describes Open Hardware and is licensed under the CERN-OHL-S v2.
+
+You may redistribute and modify this source and make products using it under
+the terms of the CERN-OHL-S v2 (https://ohwr.org/cern_ohl_s_v2.txt).
+
+This source is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY,
+INCLUDING OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A
+PARTICULAR PURPOSE. Please see the CERN-OHL-S v2 for applicable conditions.
+
+Source location: https://penon.tadorne.org/log/machining-resonance-discs/
+
+As per CERN-OHL-S v2 section 4, should You produce hardware based on this
+source, You must where practicable maintain the Source Location visible on
+the external case of the product you make using this source.
+
+---
+
+Scope
+The CERN-OHL-S v2 applies to the Penon V2 resonance machining files: the
+three CNC programs for the fixture and the two aluminium discs, and the
+associated files in this directory (signatures and FreeTSA timestamps
+included).

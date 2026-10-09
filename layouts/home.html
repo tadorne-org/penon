@@ -1,0 +1,86 @@
+{{ define "main" }}
+
+  {{- $hero := .Params.hero -}}
+  <section class="hero">
+    <div>
+      {{ with $hero.eyebrow }}<p class="hero__eyebrow">{{ . }}</p>{{ end }}
+      <h1 class="hero__title">{{ .Site.Title }}</h1>
+      {{ with $hero.lead }}<p class="hero__lead">{{ . }}</p>{{ end }}
+      {{ with $hero.ctas }}
+      <p class="hero__cta">
+        {{- range . }}
+        <a class="btn{{ if .solid }} btn--solid{{ end }}" href="{{ .url }}">{{ .label }}</a>
+        {{- end }}
+      </p>
+      {{ end }}
+    </div>
+    <div class="hero__art">{{ partial "mark.html" "" }}</div>
+  </section>
+
+  {{ with .Params.video }}
+  <figure class="showreel">
+    <video src="{{ .src | relURL }}" poster="{{ .poster | relURL }}" width="1920" height="1080"
+           autoplay muted loop playsinline controls preload="metadata"
+           {{ with .label }}aria-label="{{ . }}"{{ end }}></video>
+    {{ with .caption }}<figcaption>{{ . }}</figcaption>{{ end }}
+  </figure>
+  {{ end }}
+
+  {{ with .Params.figures }}
+  <dl class="figures">
+    {{- range . }}
+    <div class="figure"><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+    {{- end }}
+  </dl>
+  {{ end }}
+
+  {{ with .Content }}<div class="prose" style="margin-top:clamp(2rem,4vw,3rem)">{{ . }}</div>{{ end }}
+
+  {{ with .Params.notes }}
+  <section class="band" aria-labelledby="notes-title">
+    <h2 class="band__title" id="notes-title">{{ i18n "notesTitle" }}</h2>
+    <div class="notes">
+      {{- range . }}
+      <article class="note">
+        <h3>{{ .title }}</h3>
+        <p>{{ .body }}</p>
+      </article>
+      {{- end }}
+    </div>
+  </section>
+  {{ end }}
+
+  {{- $log := .Site.GetPage .Site.Params.logSection -}}
+  {{ with $log }}
+  {{ with .Pages.ByDate.Reverse }}
+  <section class="band" aria-labelledby="log-title">
+    <h2 class="band__title" id="log-title">{{ i18n "latestLog" }}</h2>
+    <div class="entries">
+      {{- range first 3 . }}
+      <article class="entry">
+        <div class="entry__date">
+          {{- with .Date }}<time datetime="{{ .Format "2006-01-02" }}">{{ time.Format ":date_medium" . }}</time>{{ end -}}
+        </div>
+        <div>
+          <h3 class="entry__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <p>{{ .Description | default .Summary }}</p>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+    <p style="margin-top:1.5rem"><a class="more" href="{{ $log.RelPermalink }}">{{ i18n "allLog" }}</a></p>
+  </section>
+  {{ end }}
+  {{ end }}
+
+  {{ with .Params.closing }}
+  <section class="closing">
+    <div>
+      <h2>{{ .title }}</h2>
+      <p>{{ .body }}</p>
+    </div>
+    <a class="btn btn--solid" href="{{ .url }}">{{ .label }}</a>
+  </section>
+  {{ end }}
+
+{{ end }}

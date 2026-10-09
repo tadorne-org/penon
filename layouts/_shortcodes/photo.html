@@ -1,0 +1,13 @@
+{{- /* {{< photo src="img/journal/x.png" alt="…" caption="…" >}} */ -}}
+{{- $src := .Get "src" -}}
+{{- $res := resources.Get $src -}}
+{{- with $res -}}
+{{- $img := .Resize "1400x webp q78" -}}
+<figure class="photo">
+  <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}"
+       alt="{{ $.Get "alt" | default "" }}" loading="lazy" decoding="async">
+  {{ with $.Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
+</figure>
+{{- else -}}
+<p><em>image manquante : {{ $src }}</em></p>
+{{- end -}}

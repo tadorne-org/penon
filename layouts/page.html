@@ -1,0 +1,19 @@
+{{ define "main" }}
+  <article>
+    <header class="page-head">
+      {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Description }}<p class="page-head__lead">{{ . }}</p>{{ end }}
+      {{ with .Params.figures }}
+      <dl class="figures" style="margin-top:1.75rem">
+        {{- range . }}
+        <div class="figure"><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>
+        {{- end }}
+      </dl>
+      {{ end }}
+    </header>
+    <div class="prose">
+      {{ .Content }}
+    </div>
+  </article>
+{{ end }}

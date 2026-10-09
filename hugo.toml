@@ -1,0 +1,106 @@
+baseURL = "https://penon.tadorne.org/"
+title = "Penon"
+enableRobotsTXT = true
+enableEmoji = false
+disableKinds = ["taxonomy", "term"]
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = false
+summaryLength = 25
+timeZone = "Europe/Paris"
+
+[params]
+  parentName = "Tadorne"
+  parentURL = "https://tadorne.org/"
+  motto = "duck engineering"
+  # Contact address shown on the site (footer and about pages).
+  contact = "contact@tadorne.org"
+  # Section holding dated notes, per language (paths differ EN/FR).
+  logSection = "/log"
+  gpgFingerprint = "5420 08E3 53EC A628 B4D6  ACAD 8C03 243A FF69 5BF7"
+  gpgUid = "Tadorne <contact@tadorne.org>"
+  gpgURL = "https://tadorne.org/verify/"
+  ogImage = "/img/tadorne-logo.svg"
+  # Penon is pre-disclosure: the site builds, but no search engine indexes it
+  # and robots.txt closes the door. Flip to true once the publication
+  # decision is taken.
+  seoIndexable = false
+
+# Hugo's HTML minifier treats `controls` as an HTML boolean attribute and
+# drops its value — which is exactly socle's <scad-viewer> API for its
+# toolbar. HTML minification is therefore off; CSS is still minified.
+[minify]
+  disableHTML = true
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github"
+    lineNos = false
+    tabWidth = 2
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[outputs]
+  home = ["HTML", "RSS"]
+  section = ["HTML", "RSS"]
+  page = ["HTML"]
+
+[languages]
+
+  [languages.en]
+    locale = "en-GB"
+    label = "English"
+    direction = "ltr"
+    contentDir = "content/en"
+    weight = 1
+    title = "Penon"
+    [languages.en.params]
+      description = "A no-moving-parts ultrasonic wind sensor, published as a commons. A Tadorne project."
+    [languages.en.menus]
+      [[languages.en.menus.main]]
+        name = "Project"
+        pageRef = "/project"
+        weight = 10
+      [[languages.en.menus.main]]
+        name = "Roadmap"
+        pageRef = "/roadmap"
+        weight = 20
+      [[languages.en.menus.main]]
+        name = "Log"
+        pageRef = "/log"
+        weight = 30
+      [[languages.en.menus.main]]
+        name = "About"
+        pageRef = "/about"
+        weight = 50
+
+  [languages.fr]
+    locale = "fr-FR"
+    label = "Français"
+    direction = "ltr"
+    contentDir = "content/fr"
+    weight = 2
+    title = "Penon"
+    [languages.fr.params]
+      description = "Anémomètre ultrasonique sans pièce mobile, publié comme un commun. Un projet Tadorne."
+      logSection = "/journal"
+    [languages.fr.menus]
+      [[languages.fr.menus.main]]
+        name = "Projet"
+        pageRef = "/projet"
+        weight = 10
+      [[languages.fr.menus.main]]
+        name = "Feuille de route"
+        pageRef = "/feuille-de-route"
+        weight = 20
+      [[languages.fr.menus.main]]
+        name = "Journal"
+        pageRef = "/journal"
+        weight = 30
+      [[languages.fr.menus.main]]
+        name = "À propos"
+        pageRef = "/a-propos"
+        weight = 50

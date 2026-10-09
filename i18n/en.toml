@@ -1,0 +1,51 @@
+[skipToContent]
+other = "Skip to content"
+
+[mainNavigation]
+other = "Main navigation"
+
+[languageSwitcher]
+other = "Language"
+
+[table]
+other = "Table, scrollable"
+
+[rssFeed]
+other = "RSS feed"
+
+[readingTime]
+one = "{{ .count }} min read"
+other = "{{ .count }} min read"
+
+[parentLine]
+other = "A Tadorne project"
+
+[latestLog]
+other = "From the log"
+
+[allLog]
+other = "All notes"
+
+[footerNavigation]
+other = "Navigation"
+
+[footerAuthenticity]
+other = "Authenticity"
+
+[footerKeyUid]
+other = "GPG key"
+
+[footerHowToVerify]
+other = "How to verify a Tadorne publication"
+
+[footerNoTracking]
+other = "No analytics, no cookies, no third-party requests."
+
+[footerLicence]
+other = "Hardware, firmware and documentation published under free licences."
+
+[footerCopyright]
+other = "© {{ .year }} tadorne.org. All rights reserved."
+
+[notesTitle]
+other = "What guides Penon"

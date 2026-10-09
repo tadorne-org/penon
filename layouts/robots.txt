@@ -1,0 +1,8 @@
+{{- if .Site.Params.seoIndexable -}}
+User-agent: *
+Allow: /
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- else -}}
+User-agent: *
+Disallow: /
+{{- end -}}

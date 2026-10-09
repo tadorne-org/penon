@@ -1,0 +1,10 @@
+{{- /* {{< viewer src="/models/x.glb" label="…" >}} — socle <scad-viewer> */ -}}
+{{- $src := .Get "src" -}}
+{{- $label := .Get "label" | default "" -}}
+{{- $height := .Get "height" | default "460" -}}
+<scad-viewer src="{{ $src }}"
+             label="{{ $label }}"
+             height="{{ $height }}"
+             controls="views,wireframe,section,fullscreen"
+             theme="auto"
+             font-base="/vendor/fonts"></scad-viewer>

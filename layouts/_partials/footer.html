@@ -1,0 +1,37 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+
+      <div>
+        <p class="site-footer__motto">{{ i18n "parentLine" }}</p>
+        <p class="site-footer__tagline">
+          <a href="{{ .Site.Params.parentURL }}">{{ .Site.Params.parentName }}</a> — {{ .Site.Params.motto }}
+        </p>
+      </div>
+
+      <div>
+        <h2>{{ i18n "footerNavigation" }}</h2>
+        <ul>
+          {{- range .Site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+
+      <div>
+        <h2>{{ i18n "footerAuthenticity" }}</h2>
+        <p>{{ i18n "footerKeyUid" }} <code>{{ .Site.Params.gpgUid }}</code></p>
+        <code class="site-footer__fp">{{ .Site.Params.gpgFingerprint }}</code>
+        <p style="margin-top:.6rem"><a href="{{ .Site.Params.gpgURL }}">{{ i18n "footerHowToVerify" }}</a></p>
+      </div>
+
+    </div>
+
+    <div class="site-footer__note">
+      <span>{{ i18n "footerNoTracking" }}</span>
+      <span>{{ i18n "footerLicence" }}</span>
+      <span>{{ i18n "footerCopyright" (dict "year" now.Year) }}</span>
+      <span>{{ .Site.Params.contact }}</span>
+    </div>
+  </div>
+</footer>
